@@ -1,11 +1,34 @@
-# 📚 Aqyun Library System (Product Manager)
+# 📚 Aqyun Library System
 
-Aplikasi Web Manajemen Buku berbasis PHP-MySQL PDO yang aman, responsif, dan estetik.
+**Aqyun Library System** adalah aplikasi manajemen perpustakaan dan penyewaan buku digital berbasis web. Sistem ini dirancang untuk memudahkan pengelolaan katalog buku, pencatatan transaksi peminjaman/pengembalian, serta manajemen pengguna secara efisien dan terstruktur.
 
-## 🌟 Fitur Utama & Keamanan
-- **CRUD Lengkap:** Create, Read (Card Responsif), Update by ID, Delete (POST + CSRF).
-- **Keamanan Query:** Menggunakan PDO Prepared Statements (`$pdo->prepare`).
-- **Sanitasi Output:** Menggunakan `htmlspecialchars()` dengan flag `ENT_QUOTES` untuk mencegah XSS.
-- **Validasi Data:** Judul minimal 3 karakter & unik, Harga > 0, Stok >= 0.
-- **Post-Redirect-Get:** Menghindari input ganda saat halaman di-refresh.
-- **UI Estetik:** Menggunakan konsep warna pastel modern dan Google Font Plus Jakarta Sans.
+---
+
+## 🚀 Fitur Utama
+
+- 📖 **Manajemen Buku**: Tambah, edit, hapus, dan tampilkan katalog buku secara teratur.
+- 🔄 **Sistem Peminjaman & Pengembalian**: Pencatatan riwayat transaksi buku secara realtime.
+- 🛡️ **Keamanan CSRF Token**: Perlindungan pada form untuk mencegah serangan *Cross-Site Request Forgery*.
+- 🗄️ **Database MySQL/PDO**: Menggunakan standar relasi data yang aman dan handal.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- **Backend**: PHP (PHP Data Objects / PDO)
+- **Database**: MySQL / MariaDB
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Server Local**: XAMPP (Apache)
+
+---
+
+## 📂 Struktur Folder Project
+
+```text
+AqyunLibrarySystem/
+├── config.php      # Konfigurasi koneksi database
+├── functions.php   # Fungsi logika backend & validasi CSRF
+├── index.php       # Halaman utama / daftar buku
+├── edit.php        # Form edit data buku
+├── database.sql    # Skema & query pendukung database
+└── README.md       # Dokumentasi project
