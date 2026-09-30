@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS db_digital_library;
+USE db_digital_library;
+
+CREATE TABLE IF NOT EXISTS books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    judul VARCHAR(255) NOT NULL UNIQUE,
+    kategori VARCHAR(100) NOT NULL,
+    harga_sewa INT NOT NULL,
+    stok INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
